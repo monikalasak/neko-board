@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Talizman Magia i Miecz",
+      "genre": "Przygodowa",
+      "borrowed": false
+    },
+    {
+      "title": "Wsiąść do pociągu ",
+      "genre": "przygodowa",
+      "borrowed": false,
+      "id": 2
+    }
+  ]
+}
