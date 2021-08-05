@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-export default function BorrowedGame() {
+export default function BorrowedGame({ id, game }) {
     const [borrowed, setBorrowed] = useState(false);
 
     const handlerBorowed = (e) => {
         e.preventDefault();
         const borroweChange = {
+            ...game,
             borrowed: true,
         };
-        fetch("http://localhost:3000/games", {
+        fetch(`http://localhost:3000/games/${id}`, {
             method: "PUT",
             body: JSON.stringify(borroweChange),
             headers: {
@@ -25,7 +26,7 @@ export default function BorrowedGame() {
 
     return (
         <div>
-            <button onChange={handlerBorowed}>Pozyczony</button>
+            <button onClick={handlerBorowed}>Pozyczony</button>
         </div>
 
     )
