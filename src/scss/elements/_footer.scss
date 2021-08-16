@@ -1,5 +1,6 @@
 .footter{
-    background-color: $color-2;
+    background: rgb(255,105,180);
+    background: linear-gradient(90deg, rgba(255,105,180,1) 0%, rgba(135,206,250,1) 65%);
     display: flex;
     justify-content: space-between;
     padding: 20px;

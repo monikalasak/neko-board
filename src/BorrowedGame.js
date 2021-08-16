@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function BorrowedGame({ id, game }) {
     const [borrowed, setBorrowed] = useState(false);
+    const rentColor = document.querySelector(".games-box")
 
     const handlerBorowed = (e) => {
         e.preventDefault();
@@ -10,7 +11,7 @@ export default function BorrowedGame({ id, game }) {
             borrowed: true,
         };
         fetch(`http://localhost:3000/games/${id}`, {
-            method: "PUT",
+            method: "PATCH",
             body: JSON.stringify(borroweChange),
             headers: {
                 "Content-Type": "application/json",
@@ -21,14 +22,23 @@ export default function BorrowedGame({ id, game }) {
                 console.log(info);
             });
 
+        const handlerColor = (borrowed === true) => {
 
-    };
+        rentColor.style.backgroundColor = "red";
 
-    return (
-        <div>
-            <button onClick={handlerBorowed}>Pozyczony</button>
-        </div>
+    }
 
-    )
+
+
+
+};
+
+
+return (
+    <div>
+        <button className="btn-rent" onClick={handlerBorowed} >Pożyczony</button>
+    </div>
+
+)
 
 }

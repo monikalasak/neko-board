@@ -1,6 +1,7 @@
 .logo-main{
-    background-color: $color-1;
-    height:100px;
+    background: rgb(255,105,180);
+    background: linear-gradient(90deg, rgba(255,105,180,1) 0%, rgba(135,206,250,1) 65%);
+    height:35%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,9 +9,14 @@
     .logo-web{
         font-family: $fonts-main;
         display: flex;
+        align-items: center;
         h1{
             font-size: 35px;
             color: $color-logo;
+        }
+        img{
+            width: 70px;
+            height: 70px;
         }
 
     }
@@ -20,10 +26,12 @@
         font-size: 25px;
         display: flex;
         align-items: center;
+        padding-right: 25px;
         .fa-users-circle{
             font-size: 50px;
             padding: 15px;
 
         }
     }
+
 }

@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 import BorrowedGame from "./BorrowedGame";
+import DeletedGame from "./DeleteGame";
 
-export default function CurrentGame() {
-    const [games, setGames] = useState([]);
-    useEffect(() => {
-        fetch("http://localhost:3000/games")
-            .then(res => res.json())
-            .then(games => {
-                console.log(games);
-                setGames(games);
-            })
-    }, []);
+export default function CurrentGame({ games }) {
+
 
     return (
         <div>
-            <section></section>
             {games.length
-                ? games.map(game => <div><h2>{game.title}</h2><p>{game.genre}</p><BorrowedGame id={game.id} game={game} /></div>)
-                : <p>loading...</p>}
+                ? games.map(game => <div className="games-box"><h2>{game.title}</h2><p> Typ gry:{game.genre}</p><div className="buttons"><BorrowedGame id={game.id} game={game} />
+                    <DeletedGame id={game.id} /></div></div>)
+                : <p className="text-loading">loading...</p>}
         </div>
     )
 

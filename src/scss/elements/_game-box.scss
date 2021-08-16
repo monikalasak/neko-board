@@ -1,0 +1,39 @@
+.games-box{
+    text-align: center;
+    border: 6px double $color-1 ;
+    padding: 35px;
+    width: 50%;
+    position: relative;
+    left:25%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    font-family: $fonts-game;
+    color: $color-2;
+    h2{
+        font-size: 30px;
+        padding: 12px;
+    
+    }
+    p{
+        padding: 12px;
+    }
+}
+.btn-rent{
+    padding: 15px;
+    border: 6px double $color-logo;
+    background: $color-2;
+    color: $color-logo;
+    font-family: $fonts-game;
+    border-radius: 16px;
+}
+.game-box-rent{
+    background: #BD9FDF;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.btn-deleted{
+    background-color: red;
+}

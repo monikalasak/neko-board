@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 
-export default function AddGame() {
+
+export default function AddGame({ setGames }) {
+
 
     const [title, setTitle] = useState("");
     const [genre, setGenre] = useState("");
@@ -34,15 +36,24 @@ export default function AddGame() {
             .then((rest) => rest.json())
             .then((info) => {
                 console.log(info);
+                setGames(prev => [...prev, gameToSave])
             });
+        //const handlerReset = () => {
+        //    this.setTitle({ title: '' });
+        //    this.setGenre({ genre: '' });
+
+
+        //}
 
     };
 
+
     return (
-        <form onSubmit={handlerSubmit}>
-            <input type="text" value={title} onChange={handlerTitle} />
-            <input type="text" value={genre} onChange={handlerGenre} />
-            <button type="submit">Dodaj grę</button>
+        <form className="form" onSubmit={handlerSubmit}>
+            <h2>Dodaj grę</h2>
+            <input type="text" value={title} onChange={handlerTitle} placeholder="Podaj tytuł" />
+            <input type="text" value={genre} onChange={handlerGenre} placeholder="Padaj typ" />
+            <button type="submit" >Dodaj grę</button>
 
         </form>
     );
