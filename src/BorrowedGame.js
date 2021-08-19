@@ -20,25 +20,20 @@ export default function BorrowedGame({ id, game }) {
             .then((rest) => rest.json())
             .then((info) => {
                 console.log(info);
+
             });
 
-        const handlerColor = (borrowed === true) => {
-
-        rentColor.style.backgroundColor = "red";
-
-    }
 
 
 
+    };
 
-};
 
+    return (
+        <div>
+            <button className="btn-rent" onClick={handlerBorowed} >Pożyczony</button>
+        </div>
 
-return (
-    <div>
-        <button className="btn-rent" onClick={handlerBorowed} >Pożyczony</button>
-    </div>
-
-)
+    )
 
 }

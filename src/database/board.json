@@ -9,26 +9,50 @@
     {
       "title": "Pandemia",
       "genre": "logiczna",
-      "borrowed": false,
+      "borrowed": true,
       "id": 9
     },
     {
       "title": "Talisman: Magia i Miecz",
       "genre": "przygotowa",
-      "borrowed": false,
+      "borrowed": true,
       "id": 10
     },
     {
       "title": "Talisman:Magia i Miecz -Las",
       "genre": "przygodowa",
-      "borrowed": false,
+      "borrowed": true,
       "id": 11
     },
     {
       "title": "Talisman:Magia i Miecz -Smoki",
       "genre": "przygodowa",
-      "borrowed": false,
+      "borrowed": true,
       "id": 12
+    },
+    {
+      "title": "Talisman: Magia i Miecz-Podziemia",
+      "genre": "przygodowa",
+      "borrowed": true,
+      "id": 13
+    },
+    {
+      "title": "Karty Dżentelmenów",
+      "genre": "towarzyska",
+      "borrowed": true,
+      "id": 14
+    },
+    {
+      "title": "Talisman: Magia i Miecz- Góry",
+      "genre": "przygodowa",
+      "borrowed": true,
+      "id": 15
+    },
+    {
+      "title": "Memy",
+      "genre": "towarzyska",
+      "borrowed": true,
+      "id": 16
     }
   ]
 }

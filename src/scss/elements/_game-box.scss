@@ -28,7 +28,28 @@
     border-radius: 16px;
 }
 .game-box-rent{
-    background: #BD9FDF;
+    text-align: center;
+    border: 6px double $color-1 ;
+    padding: 35px;
+    width: 50%;
+    position: relative;
+    left:25%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    font-family: $fonts-game;
+    color: $color-2;
+    background: rgb(167,226,213);
+    background: linear-gradient(90deg, rgba(167,226,213,1) 13%, rgba(236,217,198,1) 55%, rgba(210,182,231,1) 100%);
+    h2{
+        font-size: 30px;
+        padding: 12px;
+        color: red;
+    
+    }
+    p{
+        padding: 12px;
+    }
 }
 .buttons{
     display: flex;

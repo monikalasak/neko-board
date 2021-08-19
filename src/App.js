@@ -3,19 +3,25 @@ import AddGame from "./AddGame";
 import CurrentGame from "./CurrentGame";
 import './scss/main.scss';
 import logo from './assets/neko-board.png';
-import background from './assets/pixel-heart.png';
+
 
 
 
 function App() {
   const [games, setGames] = useState([]);
+  const [isPending, setIsPending] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:3000/games")
-      .then(res => res.json())
-      .then(games => {
-        console.log(games);
-        setGames(games);
-      })
+    setTimeout(() => {
+      fetch("http://localhost:3000/games")
+        .then(res =>
+          res.json())
+        .then(games => {
+          console.log(games);
+          setGames(games);
+          setIsPending(false);
+        });
+
+    }, 1000);
   }, []);
 
 
@@ -32,12 +38,9 @@ function App() {
           <p>Użytkownik</p>
         </div>
       </div>
-      <div style={{
-        backgroundImage: 'url(${background})',
-        witdh: '100%',
-        height: '100%'
-      }}>
+      <div>
         <AddGame setGames={setGames} />
+        {isPending && <div className="text-loading">loading...</div>}
         <CurrentGame games={games} />
       </div>
       <div className="footter">
