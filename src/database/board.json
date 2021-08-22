@@ -51,8 +51,26 @@
     {
       "title": "Memy",
       "genre": "towarzyska",
-      "borrowed": true,
+      "borrowed": false,
       "id": 16
+    },
+    {
+      "title": "sfubfuau",
+      "genre": "gsjknik",
+      "borrowed": true,
+      "id": 17
+    },
+    {
+      "title": "gdsg",
+      "genre": "fhfhdf",
+      "borrowed": false,
+      "id": 18
+    },
+    {
+      "title": "",
+      "genre": "oiku",
+      "borrowed": false,
+      "id": 19
     }
   ]
 }

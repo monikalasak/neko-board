@@ -27,8 +27,8 @@ function App() {
 
   return (
 
-    <div className="App">
-      <div className="logo-main">
+    <div className="App header">
+      <div className="logo-main header__logo">
         <div className="logo-web">
           <img src={logo} alt="neko-board"></img>
           <h1 className="logo-text">NEKO-BOARD</h1>
@@ -41,7 +41,7 @@ function App() {
       <div>
         <AddGame setGames={setGames} />
         {isPending && <div className="text-loading">loading...</div>}
-        <CurrentGame games={games} />
+        <CurrentGame games={games} setGames={setGames} />
       </div>
       <div className="footter">
         <div>

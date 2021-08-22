@@ -7,7 +7,7 @@ export default function AddGame({ setGames }) {
 
     const [title, setTitle] = useState("");
     const [genre, setGenre] = useState("");
-    const [borrowed, setBorrowed] = useState(false);
+    const [borrowed,] = useState(false);
 
 
     const handlerTitle = (e) => {
@@ -43,16 +43,12 @@ export default function AddGame({ setGames }) {
 
     };
 
-
     return (
         <form className="form" onSubmit={handlerSubmit}>
             <h2>Dodaj grę</h2>
             <input type="text" name="Title" value={title} onChange={handlerTitle} placeholder="Podaj tytuł" />
             <input type="text" name="Genre" value={genre} onChange={handlerGenre} placeholder="Padaj typ" />
-            <button type="submit" >Dodaj grę</button>
-
+            <button type="submit">Dodaj grę</button>
         </form>
     );
-
-
 }

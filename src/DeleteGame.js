@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function DeletedGame({ id, game }) {
-    const [games, setGames] = useState([]);
+    const [, setGames] = useState([]);
 
     const handlerDeleted = (e) => {
         e.preventDefault();
@@ -24,15 +24,15 @@ export default function DeletedGame({ id, game }) {
             console.log(games);
             setGames(games);
         })
-            .catch(error => {
-                console.log(error);
-            });
+        .catch(error => {
+            console.log(error);
+        });
 
     };
 
     return (
         <div>
-            <button onClick={handlerDeleted} className="btn-rent btn-deleted"> Sprzedana</button>
+            <button onClick={handlerDeleted} className="btn-rent btn-deleted">Sprzedana</button>
         </div>
     )
 
